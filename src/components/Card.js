@@ -1,10 +1,11 @@
-//This component is completely styling to create a card layout that is reusbale
+//This component is completely styling to create a card layout that will wrap other componenets
 import React from 'react';
 import { View } from 'react-native';
 
-const Card = () => {
+const Card = (props) => {
   return (
     <View style={styles.containerStyle}>
+      {props.children}
     </View>
   );
 };
@@ -21,7 +22,7 @@ const styles = {
     shadowRadius: 2,
     elevation: 1,
     marginLeft: 5,
-    marginRught: 5,
+    marginRight: 5,
     marginTop: 10
   }
 };
